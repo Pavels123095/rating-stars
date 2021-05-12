@@ -35,13 +35,13 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'PLUGIN_NAME_VERSION', '1.0.0' );
+define( 'RATING_STARS_VERSION', '1.0.0' );
 
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-plugin-name-activator.php
  */
-function activate_plugin_name() {
+function activate_rating_stars() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-rating-stars-activator.php';
 	Rating_stars_Activator::activate();
 }
@@ -50,13 +50,13 @@ function activate_plugin_name() {
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-plugin-name-deactivator.php
  */
-function deactivate_plugin_name() {
+function deactivate_rating_stars() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-rating-stars-deactivator.php';
 	Rating_stars_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_rating-stars' );
-register_deactivation_hook( __FILE__, 'deactivate_rating-stars' );
+register_activation_hook( __FILE__, 'activate_rating_stars' );
+register_deactivation_hook( __FILE__, 'deactivate_rating_stars' );
 
 /**
  * The core plugin class that is used to define internationalization,
