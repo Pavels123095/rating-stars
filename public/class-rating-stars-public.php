@@ -100,9 +100,6 @@ class Rating_stars_Public {
 
 	}
 
-	public function rating_star_widget() {
-		require_once plugin_dir_path( __FILE__ ) . 'public/class-rating-stars-widget.php';
-	}
 	public function rating_stars_column($columns) {
 		$columns['rating_views'] = 'Рейтинг';
 
@@ -112,6 +109,10 @@ class Rating_stars_Public {
 		if ( $column === 'rating_views' ) {
 			echo 'rating-views';
 		}
+	}
+
+	public function rating_star_widget() {
+		
 	}
 
 }
